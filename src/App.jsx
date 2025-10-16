@@ -10,7 +10,8 @@ import Scholarships from './pages/Scholarships';
 import Community from './pages/Community';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import BlogDashboard from './pages/admin/BlogDashboard';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -35,18 +36,18 @@ function App() {
                 }
               />
               <Route
-                path="/admin/blogs"
+                path="/admin/*"
                 element={
                   <ProtectedRoute>
-                    <BlogDashboard />
+                    <AdminDashboard />
                   </ProtectedRoute>
                 }
               />
               <Route
-                path="/dashboard"
+                path="/profile"
                 element={
                   <ProtectedRoute>
-                    <BlogDashboard />
+                    <Profile />
                   </ProtectedRoute>
                 }
               />
