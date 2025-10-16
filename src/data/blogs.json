@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Top 10 Study Techniques for Academic Success",
+    "category": "Study Tips",
+    "author": "Dr. Sarah Johnson",
+    "date": "2024-03-15",
+    "preview": "Discover proven study methods that can help you retain information better and perform excellently in your exams. From active recall to spaced repetition, learn the techniques top students use."
+  },
+  {
+    "id": 2,
+    "title": "Navigating College Applications: A Complete Guide",
+    "category": "Admissions",
+    "author": "Michael Chen",
+    "date": "2024-03-12",
+    "preview": "Learn everything you need to know about the college application process, from choosing the right schools to crafting compelling personal statements that stand out."
+  },
+  {
+    "id": 3,
+    "title": "STEM Careers: Opportunities in 2024",
+    "category": "Career Planning",
+    "author": "Prof. James Wilson",
+    "date": "2024-03-10",
+    "preview": "Explore the fastest-growing STEM careers and learn what skills you need to develop now to succeed in tomorrow's technology-driven workplace."
+  },
+  {
+    "id": 4,
+    "title": "Balancing Academics and Mental Health",
+    "category": "Wellness",
+    "author": "Dr. Emily Rodriguez",
+    "date": "2024-03-08",
+    "preview": "Mental health is just as important as academic success. Learn practical strategies to manage stress, avoid burnout, and maintain a healthy balance during your academic journey."
+  },
+  {
+    "id": 5,
+    "title": "International Study: Making the Move Abroad",
+    "category": "International",
+    "author": "Anna Kowalski",
+    "date": "2024-03-05",
+    "preview": "Thinking about studying abroad? Get insights on choosing the right country, preparing for cultural differences, and making the most of your international education experience."
+  },
+  {
+    "id": 6,
+    "title": "Financial Aid 101: Understanding Your Options",
+    "category": "Financial Aid",
+    "author": "Robert Taylor",
+    "date": "2024-03-01",
+    "preview": "Navigate the complex world of financial aid with confidence. Learn about grants, loans, work-study programs, and how to maximize your financial aid package."
+  }
+]
