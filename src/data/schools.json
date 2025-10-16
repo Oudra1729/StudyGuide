@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Stanford University",
+    "city": "Stanford, CA",
+    "country": "United States",
+    "programs": ["Computer Science", "Engineering", "Business", "Medicine"],
+    "type": "Private Research University",
+    "acceptance": "4%",
+    "contact": "admissions@stanford.edu"
+  },
+  {
+    "id": 2,
+    "name": "University of Cambridge",
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "programs": ["Natural Sciences", "Engineering", "Law", "Mathematics"],
+    "type": "Public Research University",
+    "acceptance": "18%",
+    "contact": "admissions@cam.ac.uk"
+  },
+  {
+    "id": 3,
+    "name": "National University of Singapore",
+    "city": "Singapore",
+    "country": "Singapore",
+    "programs": ["Business", "Computing", "Engineering", "Life Sciences"],
+    "type": "Public Research University",
+    "acceptance": "5%",
+    "contact": "admissions@nus.edu.sg"
+  },
+  {
+    "id": 4,
+    "name": "ETH Zurich",
+    "city": "Zurich",
+    "country": "Switzerland",
+    "programs": ["Engineering", "Architecture", "Physics", "Mathematics"],
+    "type": "Public Research University",
+    "acceptance": "8%",
+    "contact": "admissions@ethz.ch"
+  },
+  {
+    "id": 5,
+    "name": "University of Toronto",
+    "city": "Toronto, ON",
+    "country": "Canada",
+    "programs": ["Medicine", "Engineering", "Arts & Sciences", "Business"],
+    "type": "Public Research University",
+    "acceptance": "43%",
+    "contact": "admissions@utoronto.ca"
+  },
+  {
+    "id": 6,
+    "name": "University of Melbourne",
+    "city": "Melbourne",
+    "country": "Australia",
+    "programs": ["Arts", "Commerce", "Engineering", "Medicine"],
+    "type": "Public Research University",
+    "acceptance": "70%",
+    "contact": "admissions@unimelb.edu.au"
+  }
+]

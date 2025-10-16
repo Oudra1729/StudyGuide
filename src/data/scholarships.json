@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Gates Cambridge Scholarship",
+    "country": "United Kingdom",
+    "level": "Graduate",
+    "amount": "Full tuition + stipend",
+    "deadline": "2024-10-15",
+    "description": "Prestigious scholarship for outstanding applicants from outside the UK to pursue a full-time postgraduate degree at Cambridge."
+  },
+  {
+    "id": 2,
+    "title": "Fulbright Foreign Student Program",
+    "country": "United States",
+    "level": "Graduate",
+    "amount": "Full funding",
+    "deadline": "2024-09-30",
+    "description": "Provides grants for international students to study and conduct research in the United States at accredited institutions."
+  },
+  {
+    "id": 3,
+    "title": "Erasmus Mundus Joint Masters",
+    "country": "European Union",
+    "level": "Masters",
+    "amount": "€25,000/year",
+    "deadline": "2024-12-01",
+    "description": "High-quality international study programmes jointly delivered by consortia of European higher education institutions."
+  },
+  {
+    "id": 4,
+    "title": "DAAD Scholarship Germany",
+    "country": "Germany",
+    "level": "Graduate/PhD",
+    "amount": "€934/month + benefits",
+    "deadline": "2024-11-15",
+    "description": "Offers scholarships for international students and researchers at German universities with excellent academic records."
+  },
+  {
+    "id": 5,
+    "title": "Chevening Scholarships",
+    "country": "United Kingdom",
+    "level": "Masters",
+    "amount": "Full funding",
+    "deadline": "2024-11-07",
+    "description": "UK government's global scholarship programme for future leaders to pursue one-year master's degrees in the UK."
+  },
+  {
+    "id": 6,
+    "title": "Australia Awards Scholarship",
+    "country": "Australia",
+    "level": "Undergraduate/Graduate",
+    "amount": "Full tuition + living allowance",
+    "deadline": "2024-08-31",
+    "description": "Long-term development awards for citizens of participating countries to undertake full-time study at Australian universities."
+  },
+  {
+    "id": 7,
+    "title": "Swiss Government Excellence Scholarships",
+    "country": "Switzerland",
+    "level": "PhD/Postdoc",
+    "amount": "CHF 1,920/month",
+    "deadline": "2024-12-15",
+    "description": "Research scholarships for foreign scholars and artists holding a master's degree or equivalent university degree."
+  },
+  {
+    "id": 8,
+    "title": "Rhodes Scholarship",
+    "country": "United Kingdom",
+    "level": "Graduate",
+    "amount": "Full funding",
+    "deadline": "2024-10-01",
+    "description": "The oldest and most celebrated international fellowship, bringing students from around the world to Oxford University."
+  }
+]
