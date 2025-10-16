@@ -13,6 +13,7 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem('authToken');
@@ -20,8 +21,10 @@ export const AuthProvider = ({ children }) => {
       const userData = decodeToken(token);
       if (userData && userData.exp > Date.now()) {
         setUser(userData);
+        setIsAdmin(userData.role === 'admin');
       } else {
         localStorage.removeItem('authToken');
+        setIsAdmin(false);
       }
     }
     setLoading(false);
@@ -54,11 +57,13 @@ export const AuthProvider = ({ children }) => {
           const userData = {
             id: user.id,
             email: user.email,
-            name: user.name
+            name: user.name,
+            role: email.includes('admin') ? 'admin' : 'user'
           };
           const token = generateToken(userData);
           localStorage.setItem('authToken', token);
           setUser({ ...userData, exp: Date.now() + 24 * 60 * 60 * 1000 });
+          setIsAdmin(userData.role === 'admin');
           resolve({ success: true });
         } else {
           reject({ message: 'Invalid email or password' });
@@ -90,7 +95,8 @@ export const AuthProvider = ({ children }) => {
         const userData = {
           id: newUser.id,
           email: newUser.email,
-          name: newUser.name
+          name: newUser.name,
+          role: email.includes('admin') ? 'admin' : 'user'
         };
         const token = generateToken(userData);
         localStorage.setItem('authToken', token);
@@ -103,10 +109,24 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem('authToken');
     setUser(null);
+    setIsAdmin(false);
+  };
+
+  const updateProfile = async (userData) => {
+    return new Promise((resolve, reject) => {
+      try {
+        const token = generateToken(userData);
+        localStorage.setItem('authToken', token);
+        setUser(userData);
+        resolve({ success: true });
+      } catch (err) {
+        reject({ message: 'Failed to update profile' });
+      }
+    });
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, register, logout, loading }}>
+    <AuthContext.Provider value={{ user, login, register, logout, loading, updateProfile, isAdmin }}>
       {children}
     </AuthContext.Provider>
   );

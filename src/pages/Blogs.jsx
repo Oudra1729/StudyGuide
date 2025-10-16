@@ -23,8 +23,8 @@ export default function Blogs() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-r from-gray-600 to-gray-700 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 justify-center text-center">
           <h1 className="text-4xl font-bold mb-4">Educational Blogs</h1>
           <p className="text-xl opacity-90">Expert insights and advice for your academic success</p>
         </div>

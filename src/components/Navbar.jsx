@@ -1,4 +1,4 @@
-import { GraduationCap, Menu, X, LogOut, User as UserIcon, LayoutDashboard } from 'lucide-react';
+import { Menu, X, LogOut, User, User as UserIcon, LayoutDashboard } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -34,8 +34,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center gap-2">
-            <GraduationCap className="w-8 h-8 text-blue-600" />
-            <span className="text-xl font-semibold text-gray-900">SmartGuidance</span>
+            <img src="/src/Mousta9bali_logo.png" alt="Mousta9bali Logo" className="w-60 h-90" />
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
@@ -56,18 +55,37 @@ export default function Navbar() {
             {user ? (
               <div className="flex items-center gap-4 ml-2 pl-6 border-l border-gray-200">
                 <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <UserIcon className="w-4 h-4 text-blue-600" />
+                  <div className="w-8 h-8 rounded-full overflow-hidden">
+                    {user.profileImage ? (
+                      <img 
+                        src={user.profileImage} 
+                        alt={user.name}
+                        className="w-full h-full object-cover" 
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-blue-100 flex items-center justify-center">
+                        <UserIcon className="w-4 h-4 text-blue-600" />
+                      </div>
+                    )}
                   </div>
                   <span className="font-medium">{user.name}</span>
                 </div>
                 <Link
-                  to="/admin/blogs"
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                  to="/profile"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
                 >
-                  <LayoutDashboard className="w-4 h-4" />
-                  Admin
+                  <User className="w-4 h-4" />
+                  Profile
                 </Link>
+                {user?.role === 'admin' && (
+                  <Link
+                    to="/admin"
+                    className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                  >
+                    <LayoutDashboard className="w-4 h-4" />
+                    Admin
+                  </Link>
+                )}
                 <button
                   onClick={handleLogout}
                   className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-50 rounded-lg transition-colors"
@@ -124,8 +142,21 @@ export default function Navbar() {
             <div className="pt-2 mt-2 border-t border-gray-200">
               {user ? (
                 <>
-                  <div className="px-3 py-2 text-sm text-gray-700 font-medium">
-                    {user.name}
+                  <div className="px-3 py-2 flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full overflow-hidden">
+                      {user.profileImage ? (
+                        <img 
+                          src={user.profileImage} 
+                          alt={user.name}
+                          className="w-full h-full object-cover" 
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-blue-100 flex items-center justify-center">
+                          <UserIcon className="w-4 h-4 text-blue-600" />
+                        </div>
+                      )}
+                    </div>
+                    <span className="text-sm text-gray-700 font-medium">{user.name}</span>
                   </div>
                   <button
                     onClick={handleLogout}
