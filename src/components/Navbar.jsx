@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Menu, X, LogOut, User, User as UserIcon, LayoutDashboard } from 'lucide-react';
+=======
+import { GraduationCap, Menu, X, LogOut, User as UserIcon } from 'lucide-react';
+>>>>>>> d3d7d0bb7829220937f2ff7e27b803f909f55fc5
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -34,7 +38,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center gap-2">
+<<<<<<< HEAD
             <img src="/src/Mousta9bali_logo.png" alt="Mousta9bali Logo" className="w-60 h-90" />
+=======
+            <GraduationCap className="w-8 h-8 text-blue-600" />
+            <span className="text-xl font-semibold text-gray-900">SmartGuidance</span>
+>>>>>>> d3d7d0bb7829220937f2ff7e27b803f909f55fc5
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
@@ -55,6 +64,7 @@ export default function Navbar() {
             {user ? (
               <div className="flex items-center gap-4 ml-2 pl-6 border-l border-gray-200">
                 <div className="flex items-center gap-2 text-sm text-gray-700">
+<<<<<<< HEAD
                   <div className="w-8 h-8 rounded-full overflow-hidden">
                     {user.profileImage ? (
                       <img 
@@ -86,6 +96,13 @@ export default function Navbar() {
                     Admin
                   </Link>
                 )}
+=======
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <UserIcon className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span className="font-medium">{user.name}</span>
+                </div>
+>>>>>>> d3d7d0bb7829220937f2ff7e27b803f909f55fc5
                 <button
                   onClick={handleLogout}
                   className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-50 rounded-lg transition-colors"
@@ -142,6 +159,7 @@ export default function Navbar() {
             <div className="pt-2 mt-2 border-t border-gray-200">
               {user ? (
                 <>
+<<<<<<< HEAD
                   <div className="px-3 py-2 flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full overflow-hidden">
                       {user.profileImage ? (
@@ -157,6 +175,10 @@ export default function Navbar() {
                       )}
                     </div>
                     <span className="text-sm text-gray-700 font-medium">{user.name}</span>
+=======
+                  <div className="px-3 py-2 text-sm text-gray-700 font-medium">
+                    {user.name}
+>>>>>>> d3d7d0bb7829220937f2ff7e27b803f909f55fc5
                   </div>
                   <button
                     onClick={handleLogout}
@@ -189,4 +211,8 @@ export default function Navbar() {
       )}
     </nav>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d3d7d0bb7829220937f2ff7e27b803f909f55fc5
